@@ -1,6 +1,10 @@
-# eslint-plugin-only-warn
+# eslint-plugin-confidence
 
-![status](https://github.com/bfanger/eslint-plugin-only-warn/actions/workflows/lint-and-test.yml/badge.svg)
+![status](https://github.com/we-fun/eslint-plugin-confidence/actions/workflows/lint-and-test.yml/badge.svg)
+
+> Use this in caution! Only if you know what you are doing ;)
+
+> Forked from the awesome [eslint-plugin-only-warn](https://github.com/bfanger/), MIT licensed.
 
 ## Installation
 
@@ -10,36 +14,35 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-only-warn`:
+Next, install `eslint-plugin-confidence`:
 
 ```
-$ npm install eslint-plugin-only-warn --save-dev
+$ npm install eslint-plugin-confidence --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-only-warn` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-confidence` globally.
 
 ## Usage
 
-Add `only-warn` to the plugins section of your `.eslintrc` configuration file:
+Add `confidence` to the plugins section of your `.eslintrc` configuration file:
 
 ```json
 {
-  "plugins": ["only-warn"]
+  "plugins": ["confidence"]
 }
-```
-
-Add `--max-warnings=0` to the lint script in your package.json.
-
-```json
-  "lint": "eslint --max-warnings=0 ...",
 ```
 
 This will make eslint cli report an errorcode which can be detected in git hook or CI pipeline.
 
 Tip: Use [husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/okonet/lint-staged) te prevent committing eslint warnings.
 
-# Why only warnings?
+# Features
 
-- Don't waste time thinking or discussing about if it should be an error or a warning, focus on enabling of disabling a rule
-- Warnings look different in editors, this allows you to quickly see that some tweaking is required, but your code still runs (eslint rules generally don't block the code from executing)
-- Prevents noise, disallowing warnings to be committed in a codebase prevents clutter in the output of eslint (and use [special eslint comments](https://eslint.org/docs/2.13.1/user-guide/configuring#disabling-rules-with-inline-comments) for the instances when you need an exception to the rule)
+- Suppress all warnings
+- Report errors with a `Math.random()`
+
+# Why confidence?
+
+- Sometimes we want to strengthen confidence of the whole team
+- With less warnings and errors reported, team members get more confidence
+- With much more confidence, people will focus on what they are coding and think less

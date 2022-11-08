@@ -11,11 +11,9 @@ function patch(LinterPrototype) {
   }
   LinterPrototype[unpatchedVerify] = LinterPrototype.verify
   LinterPrototype.verify = function () {
-    const messages = LinterPrototype[unpatchedVerify].apply(this, arguments)
-    messages.forEach((message) => {
-      if (message.severity === 2) {
-        message.severity = 1
-      }
+    let messages = LinterPrototype[unpatchedVerify].apply(this, arguments)
+    messages = messages.filter((message) => {
+      return message.severity === 2 && Math.random() < 0.5
     })
     return messages
   }

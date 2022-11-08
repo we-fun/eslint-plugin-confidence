@@ -1,13 +1,13 @@
 {
-  "name": "eslint-plugin-only-warn",
-  "version": "1.0.3",
+  "name": "eslint-plugin-confidence",
+  "version": "0.0.0",
   "description": "Downgrade errors to warnings",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin"
   ],
-  "main": "src/only-warn.js",
+  "main": "src/confidence.js",
   "scripts": {
     "test": "npm run lint && jest",
     "lint": "prettier --check --loglevel=warn src tests && eslint src tests",
@@ -15,10 +15,10 @@
     "jest:watch": "jest --watch"
   },
   "author": "Bob Fanger",
-  "homepage": "https://github.com/bfanger/eslint-plugin-only-warn",
+  "homepage": "https://github.com/we-fun/eslint-plugin-confidence",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bfanger/eslint-plugin-only-warn.git"
+    "url": "https://github.com/we-fun/eslint-plugin-confidence.git"
   },
   "prettier": {
     "semi": false,
